@@ -24,7 +24,7 @@ export default function ArticleListItem({ article }) {
       // Remove message -> Toast
       setTimeout(() => {
         setDeleteServerMessage("");
-      }, 5000); // Adjust the timeout value as needed
+      }, 15000);
     } catch (error) {
       console.error("Failed to delete Article:", error.message);
     }
@@ -41,7 +41,7 @@ export default function ArticleListItem({ article }) {
           <img
             src={import.meta.env.VITE_BACKEND + "/" + article.imagepath}
             alt=""
-            className="w-2/12 rounded-3xl"
+            className="w-1/3 rounded-3xl object-cover"
           />
           <div className="mt-10">
             <h2 className="text-3xl">{article.articlename}</h2>
